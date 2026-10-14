@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Food | Food Ordering System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/add-food.js" defer></script>
+
+    <style>
+        .add-section {
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 25px;
+        }
+
+        .add-section h1,
+        .subtitle {
+            text-align: center;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .food-form {
+            background: white;
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 6px;
+            background: #173d35;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background: #d9a441;
+            color: #173d35;
+        }
+
+        .form-message {
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 18px;
+            background: #173d35;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        @media (max-width: 500px) {
+            .add-section {
+                margin: 25px auto;
+                padding: 15px;
+            }
+
+            .food-form {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="topbar">
+        <a class="brand" href="index.html">
+    <span class="brand-mark">🍔</span>
+    Sruthi Food <span>Ordering System</span>
+</a>
+
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="list-food.html">List Food</a>
+            <a href="find-food.html">Find Food</a>
+
+            <div class="dropdown">
+                <button class="dropdown-btn" type="button">
+                    Food Management ▼
+                </button>
+
+                <div class="dropdown-content">
+                    <a class="active" href="add-food.html">Add Food</a>
+                    <a href="update-food.html">Update Food</a>
+                    <a href="delete-food.html">Delete Food</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="add-section">
+
+            <a href="index.html" class="back-button">
+                ← Back to Home
+            </a>
+
+            <h1>Add New Food</h1>
+
+            <p class="subtitle">
+                Enter the details below to add food to your menu.
+            </p>
+
+            <form id="addFoodForm" class="food-form">
+
+                <div class="form-group">
+                    <label for="foodName">Food Name</label>
+                    <input
+                        type="text"
+                        id="foodName"
+                        name="food_name"
+                        placeholder="Example: Veg Pizza"
+                        maxlength="100"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category</label>
+
+                    <select id="category" name="category" required>
+                        <option value="">Select a category</option>
+                        <option value="Vegetarian">Vegetarian</option>
+                        <option value="Non-Vegetarian">Non-Vegetarian</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="price">Price (₹)</label>
+                    <input
+                        type="number"
+                        id="price"
+                        name="price"
+                        placeholder="Enter price"
+                        min="0.01"
+                        max="999999"
+                        step="0.01"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea
+                        id="description"
+                        name="description"
+                        placeholder="Enter a short description"
+                        maxlength="500"
+                    ></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="availability">Availability</label>
+
+                    <select id="availability" name="availability" required>
+                        <option value="1">Available</option>
+                        <option value="0">Unavailable</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-button">
+                    Add Food
+                </button>
+
+                <p id="formMessage" class="form-message" role="status"></p>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <a class="brand footer-brand" href="index.html">
+            <span class="brand-mark">✦</span>
+            Foodie<span>Corner</span>
+        </a>
+
+        <p>Fresh ideas for a happier menu.</p>
+        <small>Food Ordering System • Student Project</small>
+    </footer>
+
+</body>
+</html>

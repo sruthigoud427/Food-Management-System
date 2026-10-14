@@ -1,0 +1,14 @@
+{
+  "name": "food-ordering-system",
+  "version": "1.0.0",
+  "description": "Food Ordering System using HTML, CSS, JavaScript, Express and MySQL",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.7",
+    "express": "^4.21.2",
+    "mysql2": "^3.14.3"
+  }
+}

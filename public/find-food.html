@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Find Food | Food Ordering System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/find-food.js" defer></script>
+
+    <style>
+        .find-section {
+            max-width: 750px;
+            margin: 60px auto;
+            padding: 25px;
+        }
+
+        .find-section h1,
+        .find-section .subtitle {
+            text-align: center;
+        }
+
+        .find-section .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .search-card {
+            background: white;
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .search-card label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .search-row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .search-row input {
+            flex: 1;
+            min-width: 0;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        .search-row button {
+            padding: 12px 20px;
+            background: #173d35;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .search-row button:hover {
+            background: #d9a441;
+            color: #173d35;
+        }
+
+        .food-result {
+            margin-top: 25px;
+            padding: 20px;
+            border-radius: 10px;
+            background: #f7faf8;
+            border: 1px solid #e2eae5;
+        }
+
+        .food-result h2 {
+            margin-top: 0;
+            color: #173d35;
+        }
+
+        .food-result p {
+            margin: 12px 0;
+        }
+
+        .result-status {
+            font-weight: bold;
+        }
+
+        .result-message {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 18px;
+            background: #173d35;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        @media (max-width: 500px) {
+            .search-row {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="topbar">
+        <a class="brand" href="index.html">
+    <span class="brand-mark">🍔</span>
+    Sruthi Food <span>Ordering System</span>
+</a>
+
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="list-food.html">List Food</a>
+            <a class="active" href="find-food.html">Find Food</a>
+
+            <div class="dropdown">
+                <button class="dropdown-btn" type="button">
+                    Food Management ▼
+                </button>
+
+                <div class="dropdown-content">
+                    <a href="add-food.html">Add Food</a>
+                    <a href="update-food.html">Update Food</a>
+                    <a href="delete-food.html">Delete Food</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="find-section">
+
+            <a href="index.html" class="back-button">
+                ← Back to Home
+            </a>
+
+            <h1>Find Food</h1>
+
+            <p class="subtitle">
+                Search for a food item using its Food ID.
+            </p>
+
+            <div class="search-card">
+
+                <form id="findFoodForm">
+                    <label for="foodId">Enter Food ID</label>
+
+                    <div class="search-row">
+                        <input
+                            type="number"
+                            id="foodId"
+                            min="1"
+                            placeholder="Example: 1"
+                            required
+                        >
+
+                        <button type="submit">Search</button>
+                    </div>
+                </form>
+
+                <p id="resultMessage" class="result-message"
+                   role="status"></p>
+
+                <div id="foodResult" class="food-result" hidden></div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a class="brand footer-brand" href="index.html">
+            <span class="brand-mark">✦</span>
+            Foodie<span>Corner</span>
+        </a>
+
+        <p>Fresh ideas for a happier menu.</p>
+        <small>Food Ordering System • Student Project</small>
+    </footer>
+
+</body>
+</html>

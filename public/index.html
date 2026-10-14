@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodie Corner | Food Management</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+  <a class="brand" href="index.html">
+    <span class="brand-mark">🍔</span>
+    Sruthi  Food <span>Ordering System</span>
+</a>
+
+  <nav class="main-nav">
+    <a class="active" href="index.html">Home</a>
+
+    <a href="list-food.html">List Food</a>
+
+    <a href="find-food.html">Find Food</a>
+
+    <div class="dropdown">
+      <button class="dropdown-btn" type="button">
+        Food Management ▼
+      </button>
+
+      <div class="dropdown-content">
+        <a href="add-food.html">Add Food</a>
+        <a href="update-food.html">Update Food</a>
+        <a href="delete-food.html">Delete Food</a>
+      </div>
+    </div>
+  </nav>
+
+  
+</header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> FRESH • TASTY • MADE WITH CARE</p>
+        <h1>Good food.<br><em>Good mood.</em></h1>
+        <p class="hero-text">Explore the menu and manage your food items in one delicious place.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#menu">Explore menu <span>↓</span></a>
+          <a class="button button-light" href="add-food.html">Manage food</a>
+        </div>
+        <div class="hero-note"><span class="note-icon">✓</span> Simple food management, made easy</div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-circle"></div>
+        <div class="hero-food">🍕</div>
+        <div class="floating-card card-one"><span>🥗</span><div><b>Fresh choices</b><small>Veg & non-veg</small></div></div>
+        <div class="floating-card card-two"><span>♡</span><div><b>Made for food lovers</b><small>See what's on the menu</small></div></div>
+        <div class="hero-sticker">TASTE<br>HAPPY!</div>
+      </div>
+    </section>
+
+    <section class="section menu-section" id="menu">
+      <div class="section-heading">
+        <div><p class="eyebrow">A LITTLE SOMETHING FOR EVERYONE</p><h2>Today's <em>menu</em></h2></div>
+        <div class="filters" aria-label="Filter food items">
+          <button class="filter active" data-filter="All">All items</button>
+          <button class="filter" data-filter="Vegetarian">🥬 Vegetarian</button>
+          <button class="filter" data-filter="Non-Vegetarian">🍗 Non-veg</button>
+        </div>
+      </div>
+      <p id="menuMessage" class="message" role="status"></p>
+      <div id="foodGrid" class="food-grid">
+        <div class="loading-card">Loading delicious food…</div>
+      </div>
+    </section>
+
+    
+  </main>
+
+  <footer><a class="brand footer-brand" href="index.html"><span class="brand-mark">✦</span> Foodie<span>Corner</span></a><p>Fresh ideas for a happier menu.</p><small>Food Ordering System • Student Project</small></footer>
+
+  
+</body>
+</html>
